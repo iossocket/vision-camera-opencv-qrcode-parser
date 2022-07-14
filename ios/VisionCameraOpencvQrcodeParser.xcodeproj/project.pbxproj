@@ -6,10 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* VisionCameraOpencvQrcodeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* VisionCameraOpencvQrcodeParser.m */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libVisionCameraOpencvQrcodeParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVisionCameraOpencvQrcodeParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D398BFAA1640B40C98E839 /* VisionCameraOpencvQrcodeProcessorPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VisionCameraOpencvQrcodeProcessorPlugin.m; path = VisionCameraOpencvQrcodeProcessorPlugin/VisionCameraOpencvQrcodeProcessorPlugin.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* VisionCameraOpencvQrcodeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisionCameraOpencvQrcodeParser.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* VisionCameraOpencvQrcodeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisionCameraOpencvQrcodeParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,7 +50,16 @@
 				B3E7B5881CC2AC0600A0062D /* VisionCameraOpencvQrcodeParser.h */,
 				B3E7B5891CC2AC0600A0062D /* VisionCameraOpencvQrcodeParser.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				A6394A9E712603475EE9E058 /* VisionCameraOpencvQrcodeProcessorPlugin */,
 			);
+			sourceTree = "<group>";
+		};
+		A6394A9E712603475EE9E058 /* VisionCameraOpencvQrcodeProcessorPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				37D398BFAA1640B40C98E839 /* VisionCameraOpencvQrcodeProcessorPlugin.m */,
+			);
+			name = VisionCameraOpencvQrcodeProcessorPlugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* VisionCameraOpencvQrcodeParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
