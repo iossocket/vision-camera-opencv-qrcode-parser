@@ -54,6 +54,7 @@ android {
 repositories {
   mavenCentral()
   google()
+  maven { url 'https://www.jitpack.io' }
 
   def found = false
   def defaultDir = null
@@ -125,7 +126,10 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
-// From node_modules
+  implementation "com.github.iossocket:opencv-qrcode-parser:4.5.4@aar"
+  implementation "androidx.camera:camera-core:1.1.0-alpha08"
+
+  implementation project(path: ":react-native-vision-camera")
 }
 
 if (isNewArchitectureEnabled()) {

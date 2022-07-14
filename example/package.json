@@ -12,14 +12,18 @@
   },
   "dependencies": {
     "react": "17.0.2",
-    "react-native": "0.68.2"
+    "react-native": "0.68.2",
+    "react-native-vision-camera": "^2.13.5"
   },
   "devDependencies": {
+    "@types/react": "17.0.2",
+    "@types/react-native": "0.68.2",
     "@babel/core": "^7.12.10",
     "@babel/runtime": "^7.12.5",
     "babel-plugin-module-resolver": "^4.1.0",
     "metro-react-native-babel-preset": "^0.67.0",
     "patch-package": "^6.4.7",
-    "postinstall-postinstall": "^2.1.0"
+    "postinstall-postinstall": "^2.1.0",
+    "react-native-reanimated": "^2.8.0"
   }
 }

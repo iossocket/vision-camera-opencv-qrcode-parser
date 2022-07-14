@@ -1,20 +1,12 @@
-import { NativeModules, Platform } from 'react-native';
+/* global __qrcode_processor_plugin */
+import type { Frame } from "react-native-vision-camera";
 
-const LINKING_ERROR =
-  `The package 'vision-camera-opencv-qrcode-parser' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo managed workflow\n';
-
-const VisionCameraOpencvQrcodeParser = NativeModules.VisionCameraOpencvQrcodeParser  ? NativeModules.VisionCameraOpencvQrcodeParser  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return VisionCameraOpencvQrcodeParser.multiply(a, b);
+declare let _WORKLET: true | undefined;
+export function qrcodeProcessorPlugin(frame: Frame): string[] {
+  "worklet";
+  if (!_WORKLET) throw new Error("qrcodeProcessorPlugin must be called from a frame processor!");
+  console.log("__qrcode_processor_plugin enter")
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error because this function is dynamically injected by VisionCamera
+  return __qrcode_processor_plugin(frame);
 }
