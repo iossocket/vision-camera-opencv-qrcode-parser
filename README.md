@@ -8,12 +8,28 @@ npm install vision-camera-opencv-qrcode-parser
 
 ## Usage
 
-```js
-import { multiply } from "vision-camera-opencv-qrcode-parser";
+```
+const frameProcessor = useFrameProcessor((frame) => {
+  "worklet";
+  const values = qrcodeProcessorPlugin(frame);
+  console.log(`frameProcessor Return Values: ${JSON.stringify(values)}`);
+}, []);
+```
 
-// ...
-
-const result = await multiply(3, 7);
+Add this in `babel.config.js`
+```
+module.exports = {
+  ...
+  plugins: [
+    ...
+    [
+      "react-native-reanimated/plugin",
+      {
+        globals: [ "__qrcode_processor_plugin" ]
+      }
+    ]
+  ],
+};
 ```
 
 ## Contributing
