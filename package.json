@@ -1,6 +1,6 @@
 {
   "name": "vision-camera-opencv-qrcode-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native Vision Camera Frame Processor Plugin of OpenCV QR Parser",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
