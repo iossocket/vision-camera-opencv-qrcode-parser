@@ -36,14 +36,14 @@ public class VisionCameraOpencvQrcodeProcessorPlugin extends FrameProcessorPlugi
     WritableNativeArray array = new WritableNativeArray();
     Image image = imageProxy.getImage();
     if (image == null) {
-      map.putArray("barcode", array);
+      map.putArray("barcodes", array);
       return map;
     }
     List<String> results = WeChatQRCodeDetector.detectAndDecode(toBitmap(image));
     for (String item : results) {
       array.pushString(item);
     }
-    map.putArray("barcode", array);
+    map.putArray("barcodes", array);
     return map;
   }
 
